@@ -8,3 +8,12 @@ type Transaction struct {
 	Value  int64  `json:"value"`
 	Mined  bool   `json:"mined"`
 }
+
+func GenerateTransaction(to, from string, value int64) *Transaction {
+	tx := &Transaction{
+		To:    to,
+		From:  from,
+		Value: value,
+	}
+	return tx
+}
