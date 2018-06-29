@@ -9,6 +9,8 @@ type Transaction struct {
 	Mined  bool   `json:"mined"`
 }
 
+// GenerateTransaction is used to put together the basic elements
+// needed for a transaction
 func GenerateTransaction(to, from string, value int64) *Transaction {
 	tx := &Transaction{
 		To:    to,
